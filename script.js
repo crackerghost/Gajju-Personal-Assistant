@@ -37,7 +37,11 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     };
     Recog.onend = () => {
-      Recog.start();
+        if (active) {
+            Recog.start();
+          } else {
+            statusText.textContent = "Active";
+          }
     };
   }
 });
