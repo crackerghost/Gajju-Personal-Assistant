@@ -64,10 +64,3 @@ function speak(text) {
 }
 
 
-function listVoices() {
-    const voices = speechSynthesis.getVoices();
-  const res =  voices.map(voice => voice.name).join(', ');
-   console.log(voices)
-}
-
-speechSynthesis.onvoiceschanged = listVoices;
