@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
       text.textContent = transcript;
       if (
         transcript.toLowerCase().includes("gajju") ||
-        transcript.includes("gaju")
+        transcript.toLowerCase().includes("gaju")
       ) {
         speak("Yes Sir! How may i help you")
         statusText.textContent = "Listening...";
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (
         transcript.toLowerCase().includes("bye gajju") ||
-        transcript.includes("bye gaju")
+        transcript.toLowerCase().includes("bye gaju")
       ) {
         speak("Have a great day!")
         statusText.textContent = "Active";
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function speak(text){
-    const utterance = new window.SpeechSynthesisUtterance(text)
+    const utterance = new SpeechSynthesisUtterance(text)
     utterance.lang = 'en-US'; // Set language
     utterance.pitch = 1; // Set pitch (0 to 2)
     utterance.rate = 1; // Set rate (0.1 to 10)
