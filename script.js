@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function speak(text){
-    const utterance = window.SpeechSynthesisUtterance(text)
+    const utterance = new window.SpeechSynthesisUtterance(text)
     utterance.lang = 'en-US'; // Set language
     utterance.pitch = 1; // Set pitch (0 to 2)
     utterance.rate = 1; // Set rate (0.1 to 10)
